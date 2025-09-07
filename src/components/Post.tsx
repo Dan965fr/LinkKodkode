@@ -7,7 +7,7 @@ export default function Post({ img_url, description, likes, user_name, date }: P
       <img src={img_url} alt="post" className="post-image" />
       <div className="post-content">
         <p className="post-description">{description}</p>
-        <p className="post-likes"> {likes} likes</p>
+        <p className="post-likes"> likes: {likes}</p>
         <p className="post-user_name">from: {user_name}</p>
         <p className="post-time">{date}</p>
       </div>
