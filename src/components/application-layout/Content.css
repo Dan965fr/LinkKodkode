@@ -1,0 +1,9 @@
+.content {
+  width: 100vw;
+  height: 100vh;
+  flex: 1;
+  background-color: #a8dadc; 
+  padding: 20px;
+  direction: rtl;
+  font-family: Arial, sans-serif;
+}

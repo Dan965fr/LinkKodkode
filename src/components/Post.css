@@ -1,0 +1,47 @@
+.post {
+  background: #3832ab;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 600px; 
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post img {
+  width: 100%;       
+  height: auto;      
+  border-radius: 8px;
+}
+
+.post p {
+  margin: 5px 0;
+  font-size: 16px;
+  color:white;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .post {
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .post p {
+    font-size: 14px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .post {
+    margin: 5px;
+    padding: 8px;
+  }
+
+  .post p {
+    font-size: 13px;
+  }
+}
