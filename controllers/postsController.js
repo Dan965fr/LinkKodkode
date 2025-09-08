@@ -10,6 +10,7 @@ export function getAllPosts(req, res) {
 
 export function getPostById(req, res) {
   const id = parseInt(req.params.id);
+  if (isNaN(id)) return res.status(400).json({msg:"Invalid id"})
   const post = fetchPostById(id);
 
   if (!post) {
