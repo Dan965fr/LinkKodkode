@@ -4,7 +4,7 @@ import  type { PostType } from "../types/Posts";
 export default function Post({ img_url, description, likes, user_name, date }: PostType) {
   return (
     <div className="post">
-      <img src={img_url} alt="post" className="post-image" />
+      <img src={`http://localhost:3000${img_url}`} alt="post" className="post-image" />
       <div className="post-content">
         <p className="post-description">{description}</p>
         <p className="post-likes"> likes: {likes}</p>
