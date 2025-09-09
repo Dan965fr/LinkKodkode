@@ -22,7 +22,7 @@
   color:white;
 }
 
-/* רספונסיביות */
+/* Responsive */
 @media (max-width: 768px) {
   .post {
     max-width: 100%;
