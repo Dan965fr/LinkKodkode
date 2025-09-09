@@ -6,7 +6,7 @@
 }
 
 .layout-header {
-  width: 97vw;
+  width: 98%;
   display: flex;
   justify-content: space-between; 
   position: fixed;
@@ -14,5 +14,24 @@
   align-items: center;
   padding: 10px 20px;
   background-color: #383730; 
-  color: #000;
+  color: white;
 }
+
+.layout-header nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #1d3557;
+}
+

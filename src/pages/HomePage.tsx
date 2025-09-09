@@ -28,7 +28,7 @@ export default function HomePage() {
       <h1 className="homepage-title">Linkodkod</h1>
       <div className="posts-container">
         {posts.map(post => (
-          <div key={post.id} onClick={() => navigate(`api/posts/${post.id}`)} style={{ cursor: "pointer" }}>
+          <div key={post.id} onClick={() => navigate(`api/posts/${post.id}`)} >
             <Post {...post} />
           </div>
         ))}
