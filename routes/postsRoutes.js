@@ -1,11 +1,12 @@
 import express from "express";
-import {getAllPosts,getPostById} from "../controllers/postsController.js";
+import {getAllPostsC,getPostByIdC,createPostC} from "../controllers/postsController.js";
 
 const router = express.Router();
 
 
-router.get("/", getAllPosts);
-router.get("/:id", getPostById);
+router.get("/", getAllPostsC);
+router.get("/:id", getPostByIdC);
+router.post("/",createPostC);
 
 
 
