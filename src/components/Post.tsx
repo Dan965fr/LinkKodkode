@@ -2,9 +2,10 @@ import "./Post.css";
 import  type { PostType } from "../types/Posts";
 
 export default function Post({ img_url, description, likes, user_name, date }: PostType) {
+  const src = img_url.startsWith("data") ? img_url :`http://localhost:3000${img_url}`
   return (
     <div className="post">
-      <img src={`http://localhost:3000${img_url}`} alt="post" className="post-image" />
+      <img src={src} alt="post" className="post-image" />
       <div className="post-content">
         <p className="post-description">{description}</p>
         <p className="post-likes"> likes: {likes}</p>

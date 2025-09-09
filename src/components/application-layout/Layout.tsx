@@ -10,12 +10,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="layout">
       <header className="layout-header">
-        <Slogan />
-        <Logo />
-        <nav>
-          <button onClick={() => navigate("/")} className="nav-button">Home</button>
-          <button onClick={() => navigate("/add-post")} className="nav-button">Add Post</button>
-        </nav>
+        <div className="header-left">
+          <Slogan />
+        </div>
+        
+        <div className="header-center">
+          <nav>
+            <button onClick={() => navigate("/")} className="nav-button">Home</button>
+            <button onClick={() => navigate("/add-post")} className="nav-button">Add Post</button>
+         </nav>
+        </div>
+
+        <div className="header-right">
+          <Logo />
+        </div>
+        
       </header>
       <Content>{children}</Content>
     </div>

@@ -4,14 +4,14 @@ import Post from "../components/Post";
 import type {PostType} from '../types/Posts';
 
 export default function PostPage() {
-    const {id} = useParams();
+    const {id} = useParams<{id:string}>();
     const [post,setPost] = useState<PostType|null>(null);
     const [loading,setLoading] = useState(true);
     const [error,setError] = useState("");
 
 
     useEffect(() => { 
-    fetch(`http://localhost:3000/api/posts/${id}`)
+    fetch(`http://localhost:3000/post/${id}`)
       .then(res => {
         if (!res.ok) throw new Error("Post not found");
         return res.json();

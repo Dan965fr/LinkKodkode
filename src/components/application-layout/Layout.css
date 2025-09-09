@@ -6,21 +6,33 @@
 }
 
 .layout-header {
-  width: 98%;
+  width: 100%;
   display: flex;
   justify-content: space-between; 
   position: fixed;
   top: 0;
+  left: 0;
   align-items: center;
   padding: 10px 20px;
   background-color: #383730; 
   color: white;
+  box-sizing: border-box;
 }
 
-.layout-header nav {
+.header-left {
+  flex: 1;
   display: flex;
-  gap: 10px;
+  justify-content: left;
 }
+
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
 
 .nav-button {
   background-color: #457b9d;
@@ -34,4 +46,18 @@
 .nav-button:hover {
   background-color: #1d3557;
 }
+
+
+@media (max-width: 768px) {
+  .layout-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-left, .header-center, .header-right {
+    flex: unset;
+    justify-content: center;
+  }
+}
+
 
