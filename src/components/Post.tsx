@@ -2,7 +2,15 @@ import "./Post.css";
 import  type { PostType } from "../types/Posts";
 
 export default function Post({ img_url, description, likes, user_name, date }: PostType) {
-  const src = img_url.startsWith("data") ? img_url :`http://localhost:3000${img_url}`
+  let src:string; 
+ if (img_url.startsWith("http")) {
+    src = img_url;
+  } else if (img_url.startsWith("data:")) {
+    src = img_url;
+  } else {
+    src = `http://localhost:3000${img_url}`;
+  }
+
   return (
     <div className="post">
       <img src={src} alt="post" className="post-image" />
