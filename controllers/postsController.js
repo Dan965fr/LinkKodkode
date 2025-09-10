@@ -21,12 +21,18 @@ export function getPostByIdC(req, res) {
 }
 
 export function createPostC(req, res) {
-  const { img_url, description, user_name } = req.body;
+  const { img_url, description } = req.body;
 
   
-  if (!img_url || !description || !user_name) {
+  if (!img_url || !description ) {
     return res.status(400).json({ message: "Missing required fields" });
   }
+
+  const user_name = req.username
+  if (!user_name ) {
+    return res.status(400).json({ message: "Missing required fields" });
+  }
+
 
   try {
     const newPost = createPost({ img_url, description, user_name });
