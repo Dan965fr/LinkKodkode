@@ -3,7 +3,8 @@ import Layout from "./components/application-layout/Layout"
 import {Routes,Route} from 'react-router';
 import PostPage from "./pages/PostPage";
 import AddPost from "./pages/AddPost";
-
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
 
 
 
@@ -11,9 +12,12 @@ export default function App() {
   return (
     <Layout>
     <Routes>
+        
         <Route path="/" element={<HomePage/>}/>
         <Route path="/post/:id" element={<PostPage/>}/>
         <Route path="/add-post" element={<AddPost/>}/>
+        <Route path="/register" element={<RegisterPage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
     </Routes>
     </Layout>
     

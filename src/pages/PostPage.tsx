@@ -4,7 +4,7 @@ import Post from "../components/Post";
 import type {PostType} from '../types/Posts';
 
 export default function PostPage() {
-    const {id} = useParams<{id:string}>();
+    const {id} = useParams();
     const [post,setPost] = useState<PostType|null>(null);
     const [loading,setLoading] = useState(true);
     const [error,setError] = useState("");

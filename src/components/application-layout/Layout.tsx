@@ -16,6 +16,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         
         <div className="header-center">
           <nav>
+            <button onClick={() => navigate("/register")} className="nav-button">SignUp</button>
+            <button onClick={() => navigate("/login")} className="nav-button">Login</button>
             <button onClick={() => navigate("/")} className="nav-button">Home</button>
             <button onClick={() => navigate("/add-post")} className="nav-button">Add Post</button>
          </nav>
