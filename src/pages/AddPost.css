@@ -1,0 +1,56 @@
+.add-postpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  margin-top: 80px; 
+  font-family: Arial, sans-serif;
+}
+
+.add-postpage h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.add-postpage form {
+  background: #3832ab;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-postpage input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+.add-postpage button {
+  background: #457b9d;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:  0.3s ease;
+}
+
+.add-postpage button:hover {
+  background: #1d3557;
+}
+
+.add-postpage p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: red;
+}
