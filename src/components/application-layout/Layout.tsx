@@ -26,7 +26,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
         
       </header>
+      
       <Content>{children}</Content>
+      
+      
     </div>
   );
 }
