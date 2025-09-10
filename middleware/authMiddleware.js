@@ -1,5 +1,4 @@
-import { registerUser,loginUser } from "../services/authService";
-import { jwt } from "jsonwebtoken";
+import  jwt  from "jsonwebtoken";
 
 
 export function authMiddleware(req,res,next) {

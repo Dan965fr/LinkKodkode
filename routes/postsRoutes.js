@@ -1,13 +1,11 @@
 import express from "express";
-import {getAllPostsC,getPostByIdC,createPostC} from "../controllers/postsController.js";
+import { getAllPostsC, getPostByIdC, createPostC } from "../controllers/postsController.js";
+import { authMiddleware } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-
-router.get("/", getAllPostsC);
-router.get("/:id", getPostByIdC);
-router.post("/",createPostC);
-
-
+router.get("/", authMiddleware, getAllPostsC);
+router.get("/:id", authMiddleware, getPostByIdC);
+router.post("/", authMiddleware, createPostC);
 
 export default router;

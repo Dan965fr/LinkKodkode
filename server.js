@@ -1,6 +1,7 @@
 import express from "express";
 import cors from 'cors';
 import postRoutes from "./routes/postsRoutes.js";
+import authRoutes from "./routes/authsRoutes.js";
 import { config } from "dotenv";
 config();
 
@@ -16,6 +17,7 @@ app.use(express.static("public"));
 
 // Routes
 app.use("/api/posts", postRoutes);
+app.use("/api/posts",authRoutes)
 
 // Start server
 app.listen(PORT, () => {

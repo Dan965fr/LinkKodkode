@@ -10,7 +10,7 @@ if(fs.existsSync(userFile)){
     usersData = JSON.parse(fs.readFileSync(userFile));
 }
 
-function saveUsers() {
+export function saveUsers() {
     fs.writeFileSync(userFile,JSON.stringify(usersData,null,2));
 }
 
