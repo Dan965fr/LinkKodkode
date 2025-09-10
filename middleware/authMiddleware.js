@@ -2,7 +2,7 @@ import  jwt  from "jsonwebtoken";
 
 
 export function authMiddleware(req,res,next) {
-    const authHeader = req.headers["authorization"];
+    const authHeader = req.headers["Authorization"];
 
     if(!authHeader) return res.status(401).json({error: "No token provided"});
     
@@ -20,5 +20,5 @@ export function authMiddleware(req,res,next) {
 }
 
 export function generateToken(username) {
-  return jwt.sign({username},process.env.JWT_SECRET,{expiresln:"1h"});
+  return jwt.sign({username},process.env.JWT_SECRET,{expiresIn:"1h"});
 }

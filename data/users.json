@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "username": "daniel",
+    "password": "$2b$10$r1dXWfY2tP6iYPi0VSqowO4Iql/kzUNCkNJQgvqWnmMHidMs8wBRW"
+  },
+  {
+    "username": "yoni",
+    "password": "$2b$10$DqwmDBVXe1nAUzJVj5eMVOsDQhvkxpt9IDebYmNIoFWk2PiTTUAsS"
+  },
+  {
+    "username": "reuven",
+    "password": "$2b$10$wObG09M3bIYBXAZRGLrrdu81xGnyaLQKEpdK4kv5iYsXQ2IJnuhD6"
+  }
+]
