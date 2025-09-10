@@ -17,7 +17,7 @@ app.use(express.static("public"));
 
 // Routes
 app.use("/api/posts", postRoutes);
-app.use("/api/posts",authRoutes)
+app.use("/api/auth",authRoutes)
 
 // Start server
 app.listen(PORT, () => {

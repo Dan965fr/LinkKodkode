@@ -1,5 +1,5 @@
-import { registerUser,loginUser } from "../services/authService";
-import { generateToken } from "../middleware/authMiddleware";
+import { registerUser,loginUser } from "../services/authService.js";
+import { generateToken } from "../middleware/authMiddleware.js";
 
 
 export async function registerC(req,res) {
