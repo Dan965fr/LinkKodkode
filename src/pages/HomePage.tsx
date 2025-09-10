@@ -11,12 +11,26 @@ export default function HomePage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/posts")
-      .then(res => res.json())
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login"); 
+      return;
+    }
+
+    fetch("http://localhost:3000/api/posts", {
+      headers: {
+        "Authorization": `Bearer ${token}`,
+      },
+    })
+      .then(res => {
+        if (!res.ok) throw new Error("Failed to fetch posts");
+        return res.json();
+      })
       .then(data => setPosts(data))
       .catch(err => setError(err.message))
       .finally(() => setLoading(false));
   }, []);
+
 
   
 

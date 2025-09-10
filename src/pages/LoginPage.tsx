@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import './Login.css'
 
 export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,6 +19,7 @@ export default function LoginPage() {
     if (res.ok) {
       localStorage.setItem("token", data.token);
       alert("Logged in!");
+      navigate('/')
     } else {
       alert(data.error);
     }

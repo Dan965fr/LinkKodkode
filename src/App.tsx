@@ -12,12 +12,12 @@ export default function App() {
   return (
     <Layout>
     <Routes>
-        
+        <Route path="/register" element={<RegisterPage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/post/:id" element={<PostPage/>}/>
         <Route path="/add-post" element={<AddPost/>}/>
-        <Route path="/register" element={<RegisterPage/>}/>
-        <Route path="/login" element={<LoginPage/>}/>
+        
     </Routes>
     </Layout>
     
