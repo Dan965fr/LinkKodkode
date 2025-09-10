@@ -1,6 +1,8 @@
 import express from "express";
 import cors from 'cors';
 import postRoutes from "./routes/postsRoutes.js";
+import { config } from "dotenv";
+config();
 
 const app = express();
 const PORT = 3000;
